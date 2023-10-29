@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="stylesheet.css"/>
+	<title>Sweet Giving: Order Form</title>
+	<style>.row { flex-wrap: wrap; } img { border-radius: 5%; }</style>
+</head>
+<body>
+	<div id="header">
+		<h1>ORDER</h1>
+		<div class="subtitle" style="color: #2B2118;">Cash only! Pay on pickup.</div>
+	</div>
+	<div class="content">
+		<div id="spacer">
+			&nbsp;
+		</div>
+
+		<div class="col" style="margin: 20px;">
+			<p id="date" class="emphasis" style="font-size: 1.5em; text-align: center;"></p>
+			<div id="order-list" class="food-row"></div>
+			<button id="place-order" class="nav-button">Place order</button>
+			<button class="nav-button" onclick = "window.location.href='index.html';">Back to main menu</button>
+		</div>
+
+		<footer>
+			<h3>Contact Us:</h3>
+			☏ <a href="tel:6692468078">(669)-246-8078</a><br>
+			✉ <a href="mailto:bakesaleforscs@gmail.com">bakesaleforscs@gmail.com</a>
+		</footer>
+	</div>
+	<script src="orderForm.js"></script>
+	<script src="headerSpacing.js"></script>
+</body>
+</html>
