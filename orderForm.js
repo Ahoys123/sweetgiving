@@ -64,17 +64,19 @@ const dateElement = document.getElementById("date")
 const orderList = document.getElementById("order-list")
 const placeOrder = document.getElementById("place-order")
 
+var canOrder = true
+
 initialize()
 
 function initialize() {
 
     var date = checkDate()
     if (date === null) {
+        canOrder = false
         dateElement.innerHTML = "Sorry, the order deadline for all currently planned bakesales has passed! Please check back in later."
-        return
+    } else {
+        dateElement.innerHTML = date
     }
-
-    dateElement.innerHTML = date
 
     placeOrder.onclick = () => {
         for (let i = 0; i < orderable.length; i++) {
@@ -236,6 +238,11 @@ function getNamePopup() {
     }
 
     submit.onclick = () => {
+        if (!canOrder) {
+            document.body.appendChild(getErrPopup("Sorry, the order deadline for all currently planned bakesales has passed! Please check back in later."))
+            return
+        }
+
         if (sendForm(nameField.value, contactField.value, exit.onclick)) {
             nameField.value = ""
             contactField.value = ""
