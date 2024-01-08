@@ -21,6 +21,14 @@ const sales = [
     {
         pickup: "Order deadline: Thur, July 27, 2023, 11:59pm<br>Pickup at work on Mon the 31st from Tina or Lavell",
         lastOrder: new Date("7/27/2023 23:59"),
+    },
+    {
+        pickup: "Order deadline: Tues, Jan 2, 2024, 5:00pm<br>Pickup at work on Fri the 5th from Tina",
+        lastOrder: new Date("1/2/2024 17:00"),
+    },
+    {
+        pickup: "Order deadline: Thur, Jan 19, 2024, 11:59pm<br>Pickup at church on Sat the 21rd",
+        lastOrder: new Date("1/19/2024 23:59"),
     }
 ]
 
